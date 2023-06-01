@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h3>article-1</h3>
+        <p class="author">author-1</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, deleniti et eaque repellat eligendi excepturi at fugit blanditiis consequatur magni porro nemo mollitia ratione. Perferendis, tempora quasi. Voluptatibus, quos blanditiis!</p>
+    </article>
+    <article>
+        <h3>article-2</h3>
+        <p class="author">author-2</p>
+        <p class="description">Dolor, consectetur. Est blanditiis maiores aspernatur enim. Laboriosam nostrum, nihil temporibus quasi dignissimos dolor, rerum labore quas a ea, iusto ipsam omnis itaque deserunt obcaecati velit totam esse illo eos.</p>
+    </article>
+    <article>
+        <h3>article-3</h3>
+        <p class="author">author-3</p>
+        <p class="description">Quas, obcaecati incidunt? Tenetur, voluptas corrupti. Voluptate, perspiciatis? Nostrum, molestiae. Nostrum reiciendis obcaecati nam inventore earum, rerum, error fuga ratione consequuntur unde neque numquam aliquam iure, voluptatum repellat id deleniti?</p>
+    </article>
+
+    <script>
+        var author = document.getElementsByClassName('author');
+        for (let i = 0; i < author.length; i++) {
+            const element = author[i];
+            element.style.backgroundColor='yellow';
+            element.style.color='darkblue';
+            element.style.margin='10px';
+            element.innerHTML = 'Lekhok -'+(i+1);
+            
+        }
+        var description = document.getElementsByClassName('description');
+        for (let i = 0; i < description.length; i++) {
+            const element = description[i];
+            element.style.backgroundColor='aqua';
+            element.style.color='darkblue';
+            element.style.margin='10px';
+            
+        }
+       
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertDom</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <article id="first-article">
+        <h3>article-1</h3>
+        <p class="author">author-1</p>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, deleniti et eaque repellat eligendi excepturi at fugit blanditiis consequatur magni porro nemo mollitia ratione. Perferendis, tempora quasi. Voluptatibus, quos blanditiis!</p>
+    </article>
+    <article class="special">
+        <h3 >article-2</h3>
+        <p class="author">author-2</p>
+        <p class="description">Dolor, consectetur. Est blanditiis maiores aspernatur enim. Laboriosam nostrum, nihil temporibus quasi dignissimos dolor, rerum labore quas a ea, iusto ipsam omnis itaque deserunt obcaecati velit totam esse illo eos.</p>
+    </article>
+    <article class="special">
+        <h3>article-3</h3>
+        <p class="author">author-3</p>
+        <p class="description">Quas, obcaecati incidunt? Tenetur, voluptas corrupti. Voluptate, perspiciatis? Nostrum, molestiae. Nostrum reiciendis obcaecati nam inventore earum, rerum, error fuga ratione consequuntur unde neque numquam aliquam iure, voluptatum repellat id deleniti?</p>
+    </article>
+    <article class="special">
+        <h3>Food Item</h3>
+       <ul id="item-set">
+           <li>item-set-1</li>
+           <li>item-set-2</li>
+           <li>item-set-3</li>
+           <li>item-set-4</li>
+           <li>item-set-5</li>
+       </ul>
+    </article>
+
+    <script>
+         var article = document.getElementById('first-article');
+         var newLine = document.createElement('p')
+         newLine.innerHTML = ('This is add by JavaScrip')
+         article.appendChild(newLine)
+
+
+         //add the list
+         var ul = document.getElementById('item-set');
+         var li = document.createElement('li')
+         li.innerHTML = ('ChickenFry')
+         ul.appendChild(li)
+
+    </script>
+   
+</body>
+</html>
