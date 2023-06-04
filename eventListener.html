@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This Event Is Huge</h1>
+    <button id="btnOne">Clickme-1</button>
+    <button>Clickme-2</button>
+    <button>Clickme-3</button>
+    <button id="btnFour">Clickme-4</button>
+    <button>Clickme-5</button>
+
+
+     <script>  //one type event handler
+           function handleClick() {
+               document.body.style.backgroundColor = 'black';
+               document.body.style.color = 'aqua';
+               document.body.style.margin = '20px';
+               document.body.style.padding = '20px';
+           }
+           var firstButton = document.getElementById('btnOne');
+           firstButton.onclick = handleClick;
+     </script>
+          
+     <script> //2nd type event handler
+          var firstButton = document.getElementById('btnFour').addEventListener('click',function () {
+            document.body.style.backgroundColor = 'red';
+               document.body.style.color = 'aqua';
+          })
+     </script>
+
+</body>
+
+</html>

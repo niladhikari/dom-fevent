@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <div id="contanaer">
+        <ul id="myitem">
+            <h1>My-List</h1>
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Repellendus, maxime cum!</li>
+            <li class="item">Nemo, error ipsum.</li>
+            <li class="item">Delectus, adipisci molestiae.</li>
+            <li class="item">Ipsa, veritatis quam.</li>
+        </ul>
+        <button id="addItem">Add Item</button>
+    </div>
+
+     
+    <script>
+        // var item = document.getElementsByClassName('item');
+        // for (let i = 0; i < item.length; i++) {
+        //     var itemList = item[i];
+            
+        //     itemList.addEventListener('click',function(event) {
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }  
+        //child node theke remove kora jay,,kintu new item add hole ta remove korte
+        //bar bar remove code ti likhte hobe sob gula new add item er jonno
+
+        document.getElementById('addItem').addEventListener('click',function (event) {
+            var itemParent = document.getElementById('myitem');
+            var newItem = document.createElement('li');
+            newItem.innerHTML = 'Banana New Item';
+            itemParent.appendChild(newItem);
+            document.body.style.backgroundColor = 'red';
+            document.body.style.color = 'aqua';
+        })
+
+        document.getElementById('myitem').addEventListener('click',function (event) {
+            this,event.target.parentNode.removeChild(event.target);
+            
+        })
+
+    </script>
+
+
+</body>
+</html>
